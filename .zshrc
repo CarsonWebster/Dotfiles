@@ -92,6 +92,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 export EDITOR=nvim
+export NNN_FIFO=/tmp/nnn.fifo
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -107,3 +108,5 @@ alias ls="lsd"
 alias ll="lsd -lah"
 alias tree="lsd --tree"
 alias cat="bat"
+
+export PATH=$PATH:/home/carson/.spicetify
