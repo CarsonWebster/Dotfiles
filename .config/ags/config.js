@@ -1,18 +1,13 @@
-const date = Variable('', {
-  poll: [1000, 'date'],
-})
-
 const Bar = (monitor = 0) => Widget.Window({
   monitor,
   name: `bar${monitor}`,
   anchor: ['top', 'left', 'right'],
-  child: Widget.Label({ label: date.bind() })
+  child: Widget.Label()
+    .poll(1000, label => label.label = Utils.exec('date')),
 })
 
 export default {
   windows: [
-    // A list of all exported windows
-    Bar(0),
-    Bar(1),
+    Bar(),
   ],
 }
