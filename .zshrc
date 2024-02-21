@@ -110,3 +110,10 @@ alias tree="lsd --tree"
 alias cat="bat"
 
 export PATH=$PATH:/home/carson/.spicetify
+
+# bun completions
+[ -s "/home/carson/.bun/_bun" ] && source "/home/carson/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
